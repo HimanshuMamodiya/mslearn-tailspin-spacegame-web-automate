@@ -1,3 +1,16 @@
+provider "azurerm" {
+  features {}
+  version  = ">=2.0.0"
+}
+
+provider "azurerm" {
+  features {}
+  alias = "cloud_operations"
+  subscription_id = var.provider_ids.operations
+  skip_provider_registration = "true"
+}
+
+
 terraform {
   required_version = "> 0.12.0"
 
